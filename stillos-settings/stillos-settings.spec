@@ -3,10 +3,12 @@ Version:        38
 Release:        16%{?dist}
 Summary:        Default settings for stillOS
 
-License:        GPLv3+
-URL:            https://github.com/risiOS/risi-settings
+License:        Unlicense
+URL:            https://github.com/ProjectStill/StillReleaseRPMs
 
-Requires:   adw-gtk3-theme
+Source0:	00_stillos.gschema.override
+Source1:	LICENSE
+Requires:	adw-gtk3-theme
 
 BuildArch:  noarch
 
@@ -16,9 +18,10 @@ stillOS Settings
 %build
 %install
 mkdir -p %{buildroot}%{_datarootdir}/glib-2.0/schemas
-cp 00_stillos.gschema.override %{buildroot}%{_datarootdir}/glib-2.0/schemas/00_stillos.gschema.override
+cp %{SOURCE0} %{buildroot}%{_datarootdir}/glib-2.0/schemas/00_stillos.gschema.override
 
 %files
+%license ${SOURCE1}
 %{_datarootdir}/glib-2.0/schemas/00_stillos.gschema.override
 
 %changelog

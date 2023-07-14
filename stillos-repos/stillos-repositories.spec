@@ -1,10 +1,10 @@
-Name:		stillos-repositories
+Name:		stillos-repos
 Version:	38
-Release:	7%{?dist}
+Release:	1%{?dist}
 Summary:	Repository files for searchable repositories
 
 License:	GPL
-URL:		  https://github.com/risiOS/risios-repositories
+URL:		https://github.com/ProjectStill/StillReleaseRPMs
 
 BuildArch:	noarch
 
@@ -15,22 +15,19 @@ Requires:       fedora-third-party
 # For /etc/yum.repos.d
 Requires:	fedora-repos
 
+Source0:	stillOS.repo
+
 %description
 Repository files that make some select non-Fedora software available
 via search in gnome-software.
 
 %build
 %install
-mkdir -p $RPM_BUILD_ROOT%{_sysconfdir}
-mkdir -p $RPM_BUILD_ROOT%{_prefix}/lib/fedora-third-party/conf.d
-cp -a yum.repos.d $RPM_BUILD_ROOT%{_sysconfdir}
-cp -a pki $RPM_BUILD_ROOT%{_sysconfdir}
-cp risios.conf $RPM_BUILD_ROOT%{_prefix}/lib/fedora-third-party/conf.d/
+mkdir -p $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d
+cp %{SOURCE0} $RPM_BUILD_ROOT%{_prefix}/lib/fedora-third-party/conf.d/
 
 %files
-%{_prefix}/lib/fedora-third-party/conf.d/*.conf
 %config(noreplace) /etc/yum.repos.d/*
-%config(noreplace) /etc/pki/rpm-gpg/*
 
 %changelog
 * Thu Jul 13 2023 PizzaLovingNerd

@@ -1,0 +1,8 @@
+[stillOS]
+name=stillOS Repository
+baseurl=https://copr-be.cloud.fedoraproject.org/results/still/stillOS//fedora-$releasever-$basearch/
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://copr-be.cloud.fedoraproject.org/results/still/stillOS/pubkey.gpg
+enabled=1
+priority=50
