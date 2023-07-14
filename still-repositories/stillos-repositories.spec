@@ -1,11 +1,10 @@
-Name:		risios-repositories
+Name:		stillos-repositories
 Version:	38
 Release:	7%{?dist}
 Summary:	Repository files for searchable repositories
 
 License:	GPL
 URL:		  https://github.com/risiOS/risios-repositories
-Source0:	https://github.com/risiOS/risios-repositories/archive/refs/heads/main.tar.gz#/risios-repositories-main.tar.gz
 
 BuildArch:	noarch
 
@@ -19,9 +18,6 @@ Requires:	fedora-repos
 %description
 Repository files that make some select non-Fedora software available
 via search in gnome-software.
-
-%prep
-%autosetup -n risios-repositories-main
 
 %build
 %install
@@ -37,6 +33,9 @@ cp risios.conf $RPM_BUILD_ROOT%{_prefix}/lib/fedora-third-party/conf.d/
 %config(noreplace) /etc/pki/rpm-gpg/*
 
 %changelog
+* Thu Jul 13 2023 PizzaLovingNerd
+- stillOS
+
 * Wed Mar 2 2022 PizzaLovingNerd <pizzalovingnerd@teknik.io> - 35-1
 - Removed third-party repos in favor of risi-script
 
