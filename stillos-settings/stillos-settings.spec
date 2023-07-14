@@ -21,7 +21,6 @@ mkdir -p %{buildroot}%{_datarootdir}/glib-2.0/schemas
 cp %{SOURCE0} %{buildroot}%{_datarootdir}/glib-2.0/schemas/00_stillos.gschema.override
 
 %files
-%license %{SOURCE1}
 %{_datarootdir}/glib-2.0/schemas/00_stillos.gschema.override
 
 %changelog
