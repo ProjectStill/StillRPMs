@@ -24,7 +24,7 @@ via search in gnome-software.
 %build
 %install
 mkdir -p $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d
-cp %{SOURCE0} $RPM_BUILD_ROOT%{_prefix}/lib/fedora-third-party/conf.d/
+cp %{SOURCE0} $RPM_BUILD_ROOT%{_sysconfdir}/yum.repos.d
 
 %files
 %config(noreplace) /etc/yum.repos.d/*
