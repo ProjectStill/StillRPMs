@@ -4,7 +4,7 @@
 Summary:	stillOS release files
 Name:		stillos-release
 Version:	%{dist_version}
-Release:	2%{?dist}
+Release:	3%{?dist}
 License:	MIT
 Group:		System Environment/Base
 Source0:	LICENSE
@@ -87,13 +87,15 @@ install -d $RPM_BUILD_ROOT/usr/lib/os.release.d/
 cat << EOF >>%{buildroot}%{_prefix}/lib/os-release
 NAME=stillOS
 VERSION="%{dist_version} (%{release_name})"
+VERSION_ID=%{dist_version}
 ID=stillos
 ID_LIKE=fedora
-VERSION_ID=%{dist_version}
+LOGO=stillos-logo-icon
 PRETTY_NAME="stillOS %{dist_version} (%{release_name})"
 ANSI_COLOR="0;94"
 CPE_NAME="cpe:/o:risi:stillos:%{dist_version}"
 HOME_URL="https://github.com/ProjectStill"
+DOCUMENTATION_URL="https://github.com/ProjectStill"
 SUPPORT_URL="https://github.com/ProjectStill"
 BUG_REPORT_URL="https://github.com/ProjectStill"
 REDHAT_BUGZILLA_PRODUCT="stillOS"
@@ -101,6 +103,10 @@ REDHAT_BUGZILLA_PRODUCT_VERSION=%{bug_version}
 REDHAT_SUPPORT_PRODUCT="stillOS"
 REDHAT_SUPPORT_PRODUCT_VERSION=%{bug_version}
 PRIVACY_POLICY_URL="https://github.com/ProjectStill"
+DEFAULT_HOSTNAME="stillos"
+VARIANT="Silverblue"
+VARIANT_ID=silverblue
+OSTREE_VERSION='38.20230819.0'
 EOF
 
 # Create the common /etc/issue
