@@ -1,5 +1,5 @@
 Name:		stillos-repos
-Version:	38
+Version:	39
 Release:	1%{?dist}
 Summary:	Repository files for searchable repositories
 

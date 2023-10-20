@@ -1,5 +1,5 @@
 %global release_name 	The Cure
-%global dist_version 	38
+%global dist_version 	39
 
 Summary:	stillOS release files
 Name:		stillos-release
@@ -106,7 +106,7 @@ PRIVACY_POLICY_URL="https://github.com/ProjectStill"
 DEFAULT_HOSTNAME="stillos"
 VARIANT="Silverblue"
 VARIANT_ID=silverblue
-OSTREE_VERSION='38.20230819.0'
+OSTREE_VERSION='%{dist_version}.20230819.0'
 EOF
 
 # Create the common /etc/issue

@@ -1,5 +1,5 @@
 Name:           stillos-settings
-Version:        38
+Version:        39
 Release:        16%{?dist}
 Summary:        Default settings for stillOS
 
