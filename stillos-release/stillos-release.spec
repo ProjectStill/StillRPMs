@@ -1,5 +1,5 @@
-%global release_name 	The Cure
-%global dist_version 	39
+%global release_name 	The Becoming
+%global dist_version 	40
 
 Summary:	stillOS release files
 Name:		stillos-release
